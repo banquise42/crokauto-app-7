@@ -152,15 +152,35 @@ background:transparent;
     <div class="small" id="wifiNote"></div>
   </div>
 
-  <!-- ===== MAIL ===== -->
-  <div id="panelMail" class="card hidden">
-    <input id="sender" placeholder="Email envoi">
-    <input id="password" placeholder="Mot de passe">
-    <input id="recipient" placeholder="Email réception">
-    <input id="threshold" placeholder="Seuil alerte">
-    <button class="btn gold" onclick="saveMail()">Sauvegarder</button>
-    <button class="btn gold" onclick="mailTest()">Test mail</button>
+ <!-- ===== MAIL ===== -->
+<div id="panelMail" class="card hidden">
+
+  <input id="sender" placeholder="Email envoi">
+  <input id="password" placeholder="Mot de passe">
+  <input id="recipient" placeholder="Email réception">
+
+  <div class="label" style="margin-top:15px">
+    Seuil d’alerte réserve
   </div>
+
+  <div style="display:flex;align-items:center;gap:8px;margin-top:6px">
+    <input id="threshold" type="number"
+           inputmode="numeric"
+           min="0"
+           placeholder="Seuil alerte (g)"
+           style="width:110px;text-align:center">
+    <div class="small">grammes</div>
+  </div>
+
+  <button class="btn gold" style="margin-top:15px" onclick="saveMail()">
+    Sauvegarder
+  </button>
+
+  <button class="btn gold" style="margin-top:8px" onclick="mailTest()">
+    Test mail
+  </button>
+
+</div>
 
   <!-- ===== LAMPE ===== -->
   <div id="panelLamp" class="card hidden">
